@@ -1,0 +1,11 @@
+@media (max-width: 992px) {
+  .sidebar-container {
+    display: none;
+  }
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Spinner } from "react-bootstrap";
-import logo from "../assets/img/logo/logo.png";
+import logo from "../assets/img/logo/logo2.jpeg";
 import "./loading-page.scss";
 
 const LoadingPage = () => {

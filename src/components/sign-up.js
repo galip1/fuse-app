@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import logo from "../assets/img/logo/logo.png";
+import logo from "../assets/img/logo/logo2.jpeg";
 import { Link } from "react-router-dom";
 import "./sign-up.scss";
 import Sidebar from "./sidebar";

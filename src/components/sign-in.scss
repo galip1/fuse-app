@@ -103,7 +103,7 @@ button[type="submit"] {
     height: 1px;
     background-color: rgba(0, 0, 0, 0.5);
     vertical-align: middle;
-    opacity: 0.5;
+    opacity: 0.3;
     @media (max-width: 767px) {
       display: none;
     }
@@ -120,9 +120,7 @@ button[type="submit"] {
   .buttons {
     display: flex;
     justify-content: space-between;
-    :hover {
-      background-color: rgba(128, 128, 128, 0.407);
-    }
+
     button {
       border-radius: 25px;
       margin-right: 10px;

@@ -8,9 +8,11 @@
   background-size: cover;
   box-sizing: border-box;
   opacity: 0.9;
+
   @media (max-width: 1100px) {
     height: 120vh;
   }
+
   .sidebar-content {
     content: "";
     display: flex;
@@ -26,14 +28,17 @@
       flex-direction: column;
       justify-content: center;
       position: relative;
-      :nth-child(2) {
+
+      &:nth-child(2) {
         position: absolute;
         top: 2.8rem;
       }
+
       h2 {
         font-size: 3rem;
         font-weight: 700;
       }
+
       p {
         margin-top: 4rem;
       }

@@ -1,10 +1,12 @@
 @use "../assets/scss/mixins" as m;
 @use "../assets/scss/variables" as v;
+
 body {
   @media (max-width: 899px) {
     background-color: rgba(128, 128, 128, 0.296) !important;
   }
 }
+
 @media (max-width: 899px) {
   .sidebar-image {
     display: none;
@@ -15,10 +17,13 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 4rem 4rem 0 12rem;
+
   @media (max-width: 1100px) {
     padding: 4rem 3rem 0 3rem;
   }
+
   @media (max-width: 899px) {
     background-color: white;
     border: 1px solid rgba(128, 128, 128, 0.594);
@@ -27,6 +32,10 @@ form {
     padding: 3rem 2rem;
     border-radius: 35px;
   }
+
+  @media (max-width: 576px) {
+    width: 75%;
+  }
 }
 
 button[type="submit"] {
@@ -34,37 +43,59 @@ button[type="submit"] {
   border-radius: 10px;
   margin-top: 20px;
   background-color: v.$color3;
+
   &:hover {
     background-color: v.$color1 !important;
   }
 }
+
 .sign-in-container {
   .form-signin {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
     .sign {
       font-weight: 900;
       font-size: 2.5rem;
     }
+    .typography {
+      @media (max-width: 576px) {
+        margin: 0;
+        padding: 0;
+      }
+    }
     .sign-link {
       margin-left: 0.2rem;
+
+      @media (max-width: 576px) {
+        margin: 0;
+      }
     }
+
     img {
       margin-bottom: 2rem;
       width: 15%;
+
+      @media (max-width: 576px) {
+        width: 20%;
+        margin-bottom: 1rem;
+      }
     }
 
     .box-container {
       width: 100%;
+
       .remember-me-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         @media (max-width: 635px) {
           display: flex;
           flex-direction: column;
         }
+
         .remember-me {
           display: flex;
           align-items: center;
@@ -82,13 +113,15 @@ button[type="submit"] {
   padding: 0.6rem 0 !important;
   border-radius: 50px !important;
 
-  :hover {
+  &:hover {
     background-color: v.$color1 !important;
   }
 }
+
 .button-container {
   width: 100%;
   text-align: center;
+
   .or-continue {
     position: relative;
     text-align: center;
@@ -104,6 +137,7 @@ button[type="submit"] {
     background-color: rgba(0, 0, 0, 0.5);
     vertical-align: middle;
     opacity: 0.3;
+
     @media (max-width: 767px) {
       display: none;
     }
@@ -127,9 +161,11 @@ button[type="submit"] {
       width: 50%;
       border: 1.5px solid rgba(0, 0, 0, 0.61);
       color: rgb(97, 91, 91);
+
       @media (max-width: 992px) {
         margin: auto;
       }
+
       svg {
         font-size: 1.5rem;
       }

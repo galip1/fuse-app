@@ -51,7 +51,7 @@ const SignUp = () => {
 
           <Grid item className="mb-4">
             <Typography variant=""> Already have an account? </Typography>
-            <MuiLink component={Link} to="/" variant="body2">
+            <MuiLink component={Link} to="/sign-in" variant="body2">
               Sign in
             </MuiLink>
           </Grid>

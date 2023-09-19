@@ -22,7 +22,7 @@ const SignIn = () => {
 
   const formik = useFormik({
     initialValues: {
-      email: "admin@fusetheme.com",
+      email: "admin@example.com",
       password: "12345",
     },
     validationSchema: Yup.object({
@@ -45,11 +45,14 @@ const SignIn = () => {
           </Typography>
 
           <Grid item className="mb-4 text-align-left">
-            <Typography variant=""> Don't have an account? </Typography>
+            <Typography variant="" className="typography">
+              {" "}
+              Don't have an account?{" "}
+            </Typography>
             <MuiLink
               className="sign-link"
               component={Link}
-              to="/signup"
+              to="/sign-up"
               variant="body2"
             >
               Sign up

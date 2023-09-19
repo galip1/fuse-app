@@ -16,6 +16,7 @@ import { CiTwitter } from "react-icons/ci";
 import { PiGithubLogoLight } from "react-icons/pi";
 import { SlSocialFacebook } from "react-icons/sl";
 import "./sign-in.scss";
+import Sidebar from "./sidebar";
 const SignIn = () => {
   const [rememberMe, setRememberMe] = useState(false);
 
@@ -30,96 +31,102 @@ const SignIn = () => {
         .required("You must enter a email"),
       password: Yup.string().required("Please enter your password."),
     }),
-    onSubmit: (values) => {
-      // Form submit logic
-    },
+    onSubmit: (values) => {},
   });
 
   return (
-    <form onSubmit={formik.handleSubmit} className="form-signin">
-      <img src={logo} alt="logo" />
+    <Grid container spacing={1} className="sign-in-container">
+      <Grid item xs={12} md={5}>
+        <form onSubmit={formik.handleSubmit} className="form-signin ">
+          <img src={logo} alt="logo" />
 
-      <Typography className="sign" variant="h4">
-        Sign in
-      </Typography>
+          <Typography className="sign" variant="h4">
+            Sign in
+          </Typography>
 
-      <Grid item className="mb-4 text-align-left">
-        <Typography variant=""> Don't have an account? </Typography>
-        <MuiLink
-          className="sign-link"
-          component={Link}
-          to="/signup"
-          variant="body2"
-        >
-          Sign up
-        </MuiLink>
-      </Grid>
-      <TextField
-        className="mb-4"
-        label="Email"
-        name="email"
-        fullWidth
-        {...formik.getFieldProps("email")}
-        error={formik.touched.email && Boolean(formik.errors.email)}
-        helperText={formik.touched.email && formik.errors.email}
-      />
-      <TextField
-        label="Password"
-        name="password"
-        type="password"
-        fullWidth
-        {...formik.getFieldProps("password")}
-        error={formik.touched.password && Boolean(formik.errors.password)}
-        helperText={formik.touched.password && formik.errors.password}
-      />
+          <Grid item className="mb-4 text-align-left">
+            <Typography variant=""> Don't have an account? </Typography>
+            <MuiLink
+              className="sign-link"
+              component={Link}
+              to="/signup"
+              variant="body2"
+            >
+              Sign up
+            </MuiLink>
+          </Grid>
+          <TextField
+            className="mb-4"
+            label="Email"
+            name="email"
+            fullWidth
+            {...formik.getFieldProps("email")}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
+          />
+          <TextField
+            label="Password"
+            name="password"
+            type="password"
+            fullWidth
+            {...formik.getFieldProps("password")}
+            error={formik.touched.password && Boolean(formik.errors.password)}
+            helperText={formik.touched.password && formik.errors.password}
+          />
 
-      <Box mt={1} className="box-container">
-        <div className="remember-me-container">
-          <div className="remember-me">
-            <Checkbox
-              checked={rememberMe}
-              onChange={() => setRememberMe(!rememberMe)}
-              color="primary"
-            />
-            <Typography variant="body2">Remember me</Typography>
-          </div>
-          <MuiLink
-            component={Link}
-            to="/forgot-password"
-            variant="body2"
-            className="forgot-password"
+          <Box mt={1} className="box-container">
+            <div className="remember-me-container">
+              <div className="remember-me">
+                <Checkbox
+                  checked={rememberMe}
+                  onChange={() => setRememberMe(!rememberMe)}
+                  color="primary"
+                />
+                <Typography variant="body2">Remember me</Typography>
+              </div>
+              <MuiLink
+                component={Link}
+                to="/forgot-password"
+                variant="body2"
+                className="forgot-password"
+              >
+                Forgot password?
+              </MuiLink>
+            </div>
+          </Box>
+
+          <Button
+            className="mt-4 btn-sign-in"
+            type="submit"
+            variant="contained"
+            color="primary"
           >
-            Forgot password?
-          </MuiLink>
-        </div>
-      </Box>
+            Sign in
+          </Button>
 
-      <Button
-        className="mt-4 btn-sign-in"
-        type="submit"
-        variant="contained"
-        color="primary"
-      >
-        Sign in
-      </Button>
+          <Box mt={2} className="button-container">
+            <Typography className="my-4" variant="body2">
+              Or continue in with
+            </Typography>
+            <div className="buttons">
+              <Button variant="outlined">
+                <SlSocialFacebook />
+              </Button>
+              <Button variant="outlined">
+                <CiTwitter />
+              </Button>
+              <Button variant="outlined" className="github-icon">
+                <PiGithubLogoLight />
+              </Button>
+            </div>
+          </Box>
+        </form>
+      </Grid>
 
-      <Box mt={2} className="button-container">
-        <Typography className="my-4" variant="body2">
-          Or continue in with
-        </Typography>
-        <div className="buttons">
-          <Button variant="outlined">
-            <SlSocialFacebook />
-          </Button>
-          <Button variant="outlined">
-            <CiTwitter />
-          </Button>
-          <Button variant="outlined" className="github-icon">
-            <PiGithubLogoLight />
-          </Button>
-        </div>
-      </Box>
-    </form>
+      <Grid item xs={12} md={7}>
+        <Sidebar />
+      </Grid>
+    </Grid>
   );
 };
 

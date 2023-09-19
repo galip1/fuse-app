@@ -1,26 +1,32 @@
 .sidebar-image {
   position: relative;
-  background-image: url("../assets/img/image/image1.png");
+  background-image: url("../assets/img/image/image5.jpeg");
   width: auto;
   height: 100vh;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-
+  box-sizing: border-box;
   .sidebar-content {
     content: "";
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 20rem;
-    left: 3rem;
+    top: 10rem;
+    left: 5rem;
     right: 1rem;
     color: white;
     text-align: justify;
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
 
     .img-p {
       display: flex;
-      justify-content: space-between;
+      //  justify-content: space-around;
+      align-items: center;
+      //gap: 1rem;
       span {
         display: flex;
         margin-right: 1rem;

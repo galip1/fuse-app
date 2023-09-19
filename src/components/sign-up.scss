@@ -1,19 +1,20 @@
 @use "../assets/scss/mixins" as m;
 @use "../assets/scss/variables" as v;
-
-.form-signup {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  .sign {
-    font-weight: 900;
-    font-size: 2.5rem;
-  }
-  .sign-link {
-    margin-left: 0.2rem;
-  }
-  img {
-    margin-bottom: 2rem;
-    width: 10%;
+.sign-up-container {
+  .form-signup {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .sign {
+      font-weight: 900;
+      font-size: 2.5rem;
+    }
+    .sign-link {
+      margin-left: 0.2rem;
+    }
+    img {
+      margin-bottom: 2rem;
+      width: 15%;
+    }
   }
 }

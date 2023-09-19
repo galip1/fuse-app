@@ -1,5 +1,4 @@
 import React from "react";
-import image from "../assets/img/image/image1.png";
 import "./sidebar.scss";
 import image1 from "../assets/img/image/image1.jpeg";
 import image2 from "../assets/img/image/iamge2.jpeg";
@@ -7,9 +6,9 @@ import image3 from "../assets/img/image/image3.jpeg";
 const Sidebar = () => {
   return (
     <div className="sidebar-image">
-      {/* <img src={image} alt="Image" /> */}
       <div className="sidebar-content">
-        <h2>Welcome to our community</h2>
+        <h2>Welcome to</h2>
+        <h2>our community</h2>
         <p>
           Fuse helps developers to build organized and well coded dashboards
           full of beautiful and rich modules. Join us and start building your

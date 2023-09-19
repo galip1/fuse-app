@@ -5,11 +5,18 @@ body {
     background-color: rgba(128, 128, 128, 0.296) !important;
   }
 }
+@media (max-width: 992px) {
+  .sidebar-image {
+    display: none;
+  }
+}
+
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
+  //  margin-top: 5rem;
+  padding: 3rem 2rem 10rem 10rem;
   @media (max-width: 992px) {
     background-color: white;
     border: 1px solid rgba(128, 128, 128, 0.594);
@@ -25,43 +32,48 @@ button[type="submit"] {
   border-radius: 10px;
   margin-top: 20px;
 }
-
-.form-signin {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  .sign {
-    font-weight: 900;
-    font-size: 2.5rem;
-  }
-  .sign-link {
-    margin-left: 0.2rem;
-  }
-  img {
-    margin-bottom: 2rem;
-    width: 10%;
-  }
-
-  .box-container {
-    width: 100%;
-    .remember-me-container {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
-      .remember-me {
-        display: flex;
-        align-items: center;
-      }
+.sign-in-container {
+  .form-signin {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    .sign {
+      font-weight: 900;
+      font-size: 2.5rem;
+    }
+    .sign-link {
+      margin-left: 0.2rem;
+    }
+    img {
+      margin-bottom: 2rem;
+      width: 15%;
     }
 
-    .forgot-password {
-      text-align: right;
+    .box-container {
+      width: 100%;
+      .remember-me-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media (max-width: 576px) {
+          display: flex;
+          flex-direction: column;
+        }
+        .remember-me {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .forgot-password {
+        text-align: right;
+      }
     }
   }
 }
+
 .btn-sign-in {
-  padding: 1rem 0 !important;
+  padding: 0.75rem 0 !important;
   border-radius: 50px !important;
 
   :hover {
@@ -80,7 +92,7 @@ button[type="submit"] {
     button {
       border-radius: 25px;
       margin-right: 10px;
-      padding: 0.5rem 3rem;
+      //  padding: 0.5rem 3rem;
       border: 1px solid rgba(0, 0, 0, 0.61);
       color: rgb(97, 91, 91);
       @media (max-width: 992px) {

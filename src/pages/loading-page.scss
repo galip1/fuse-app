@@ -2,7 +2,7 @@
 @use "../assets/scss/mixins" as m;
 
 .loading-page {
-  background-color: v.$color1;
+  background-color: white;
   width: 100vw;
   height: 100vh;
   @include m.flexbox(row, center, center, 0);
@@ -15,7 +15,7 @@
   .spinner-border {
     width: 20rem;
     height: 20rem;
-    color: white !important;
+    color: v.$color1 !important;
     position: absolute;
   }
 }

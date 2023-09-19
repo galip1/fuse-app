@@ -86,7 +86,7 @@ const SignIn = () => {
               </div>
               <MuiLink
                 component={Link}
-                to="/forgot-password"
+                to="/"
                 variant="body2"
                 className="forgot-password"
               >
@@ -105,7 +105,7 @@ const SignIn = () => {
           </Button>
 
           <Box mt={2} className="button-container">
-            <Typography className="my-4" variant="body2">
+            <Typography className="my-4 or-continue" variant="body2">
               Or continue in with
             </Typography>
             <div className="buttons">

@@ -61,7 +61,7 @@ button[type="submit"] {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @media (max-width: 576px) {
+        @media (max-width: 635px) {
           display: flex;
           flex-direction: column;
         }
@@ -89,6 +89,34 @@ button[type="submit"] {
 .button-container {
   width: 100%;
   text-align: center;
+  .or-continue {
+    position: relative;
+    text-align: center;
+    margin: 1rem 0;
+  }
+
+  .or-continue::before,
+  .or-continue::after {
+    content: "";
+    display: inline-block;
+    width: 25%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    vertical-align: middle;
+    opacity: 0.5;
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .or-continue::before {
+    margin-right: 10px;
+  }
+
+  .or-continue::after {
+    margin-left: 10px;
+  }
+
   .buttons {
     display: flex;
     justify-content: space-between;

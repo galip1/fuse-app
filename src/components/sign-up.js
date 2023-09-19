@@ -111,7 +111,12 @@ const SignUp = () => {
             }
             label="I agree to the Terms of Service and Privacy Policy"
           />
-          <Button type="submit" variant="contained" color="primary">
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            disabled={!formik.isValid || !formik.dirty}
+          >
             Create your free account
           </Button>
         </form>

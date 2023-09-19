@@ -7,13 +7,16 @@ const Sidebar = () => {
   return (
     <div className="sidebar-image">
       <div className="sidebar-content">
-        <h2>Welcome to</h2>
-        <h2>our community</h2>
-        <p>
-          Fuse helps developers to build organized and well coded dashboards
-          full of beautiful and rich modules. Join us and start building your
-          application today.
-        </p>
+        <div className="head">
+          <h2>Welcome to</h2>
+          <h2>our community</h2>
+
+          <p>
+            Fuse helps developers to build organized and well coded dashboards
+            full of beautiful and rich modules. Join us and start building your
+            application today.
+          </p>
+        </div>
         <div className="img-p">
           <span>
             <img src={image1} alt="" />

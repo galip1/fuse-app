@@ -1,7 +1,22 @@
+@use "../assets/scss/mixins" as m;
+@use "../assets/scss/variables" as v;
+body {
+  @media (max-width: 992px) {
+    background-color: rgba(128, 128, 128, 0.296) !important;
+  }
+}
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 992px) {
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.594);
+    width: 50%;
+    margin: auto;
+    padding: 3rem 2rem;
+    border-radius: 35px;
+  }
 }
 
 button[type="submit"] {
@@ -10,64 +25,69 @@ button[type="submit"] {
   margin-top: 20px;
 }
 
-.box-container .mb-4 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-.box-container {
+.form-signin {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  .logo {
-    align-self: flex-start;
+  .sign {
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+  .sign-link {
+    margin-left: 0.2rem;
+  }
+  img {
+    margin-bottom: 2rem;
+    width: 10%;
   }
 
-  .sign-in-text {
-    align-self: flex-start;
-  }
-
-  .dont-have-account {
-    margin-top: 1rem;
-    align-self: flex-start;
-  }
-  .remember-me-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .remember-me {
+  .box-container {
+    width: 100%;
+    .remember-me-container {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+
+      .remember-me {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .forgot-password {
+      text-align: right;
     }
   }
+}
+.btn-sign-in {
+  padding: 1rem 0 !important;
+  border-radius: 50px !important;
 
-  .forgot-password {
-    text-align: right;
+  :hover {
+    background-color: v.$color1 !important;
   }
 }
-
-.box-container .mb-4::before,
-.box-container .mb-4::after {
-  content: "";
-  flex-grow: 1;
-  height: 1px;
-  background-color: #ccc;
-  margin: 0 10px;
-}
-
 .button-container {
-  button {
-    border-radius: 25px;
-    margin-right: 10px;
-    padding: 0.5rem 2.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.61);
-    color: rgb(31, 30, 30);
-
-    svg {
-      font-size: 2rem;
+  width: 100%;
+  text-align: center;
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    :hover {
+      background-color: rgba(128, 128, 128, 0.407);
+    }
+    button {
+      border-radius: 25px;
+      margin-right: 10px;
+      padding: 0.5rem 3rem;
+      border: 1px solid rgba(0, 0, 0, 0.61);
+      color: rgb(97, 91, 91);
+      @media (max-width: 992px) {
+        margin: auto;
+      }
+      svg {
+        font-size: 2rem;
+      }
     }
   }
 }

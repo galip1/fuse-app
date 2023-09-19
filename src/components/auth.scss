@@ -1,11 +1,13 @@
-@media (max-width: 992px) {
-  .sidebar-container {
-    display: none;
-  }
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 .auth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  @media (max-width: 992px) {
+    .sidebar-container {
+      display: none;
+    }
+  }
 }

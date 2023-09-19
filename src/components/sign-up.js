@@ -12,6 +12,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import logo from "../assets/img/logo/logo.png";
 import { Link } from "react-router-dom";
+import "./sign-up.scss";
 
 const SignUp = () => {
   const formik = useFormik({
@@ -24,11 +25,13 @@ const SignUp = () => {
     },
     validationSchema: Yup.object({
       displayName: Yup.string().required("Invalid name"),
-      email: Yup.string().email("Invalid email address").required("Required"),
+      email: Yup.string()
+        .email("Invalid email address")
+        .required("Invalid email address"),
       password: Yup.string().required("Invalid password"),
       confirmPassword: Yup.string()
         .oneOf([Yup.ref("password"), null], "Passwords must match")
-        .required("Required"),
+        .required("Invalid password"),
       agreeToTerms: Yup.boolean()
         .oneOf([true], "Must accept Terms and Conditions")
         .required("Must accept Terms and Conditions"),
@@ -39,7 +42,7 @@ const SignUp = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit} className="form-signup">
       <img src={logo} alt="logo" />
       <Typography variant="h4">Sign up</Typography>
 
@@ -52,6 +55,7 @@ const SignUp = () => {
       <TextField
         label="Display Name"
         name="displayName"
+        className="mb-4"
         fullWidth
         {...formik.getFieldProps("displayName")}
         error={formik.touched.displayName && Boolean(formik.errors.displayName)}
@@ -60,6 +64,7 @@ const SignUp = () => {
       <TextField
         label="Email"
         name="email"
+        className="mb-4"
         fullWidth
         {...formik.getFieldProps("email")}
         error={formik.touched.email && Boolean(formik.errors.email)}
@@ -69,6 +74,7 @@ const SignUp = () => {
         label="Password"
         name="password"
         type="password"
+        className="mb-4"
         fullWidth
         {...formik.getFieldProps("password")}
         error={formik.touched.password && Boolean(formik.errors.password)}
@@ -78,6 +84,7 @@ const SignUp = () => {
         label="Confirm Password"
         name="confirmPassword"
         type="password"
+        className="mb-4"
         fullWidth
         {...formik.getFieldProps("confirmPassword")}
         error={
@@ -97,7 +104,7 @@ const SignUp = () => {
             color="primary"
           />
         }
-        label="I agree to the Terms and Conditions"
+        label="I agree to the Terms of Service and Privacy Policy"
       />
       <Button type="submit" variant="contained" color="primary">
         Create your free account

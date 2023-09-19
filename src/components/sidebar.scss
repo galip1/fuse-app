@@ -1,0 +1,34 @@
+.sidebar-image {
+  position: relative;
+  background-image: url("../assets/img/image/image1.png");
+  width: auto;
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .sidebar-content {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20rem;
+    left: 3rem;
+    right: 1rem;
+    color: white;
+    text-align: justify;
+
+    .img-p {
+      display: flex;
+      justify-content: space-between;
+      span {
+        display: flex;
+        margin-right: 1rem;
+        img {
+          width: 45px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

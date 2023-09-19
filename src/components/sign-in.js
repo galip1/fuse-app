@@ -36,13 +36,21 @@ const SignIn = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit} className="box-container">
+    <form onSubmit={formik.handleSubmit} className="form-signin">
       <img src={logo} alt="logo" />
-      <Typography variant="h4">Sign in</Typography>
 
-      <Grid item className="mb-4">
+      <Typography className="sign" variant="h4">
+        Sign in
+      </Typography>
+
+      <Grid item className="mb-4 text-align-left">
         <Typography variant=""> Don't have an account? </Typography>
-        <MuiLink component={Link} to="/signup" variant="body2">
+        <MuiLink
+          className="sign-link"
+          component={Link}
+          to="/signup"
+          variant="body2"
+        >
           Sign up
         </MuiLink>
       </Grid>
@@ -87,7 +95,7 @@ const SignIn = () => {
       </Box>
 
       <Button
-        className="mt-4"
+        className="mt-4 btn-sign-in"
         type="submit"
         variant="contained"
         color="primary"
@@ -96,18 +104,20 @@ const SignIn = () => {
       </Button>
 
       <Box mt={2} className="button-container">
-        <Typography className="mb-4" variant="body2">
+        <Typography className="my-4" variant="body2">
           Or continue in with
         </Typography>
-        <Button variant="outlined">
-          <SlSocialFacebook />
-        </Button>
-        <Button variant="outlined">
-          <CiTwitter />
-        </Button>
-        <Button variant="outlined" className="github-icon">
-          <PiGithubLogoLight />
-        </Button>
+        <div className="buttons">
+          <Button variant="outlined">
+            <SlSocialFacebook />
+          </Button>
+          <Button variant="outlined">
+            <CiTwitter />
+          </Button>
+          <Button variant="outlined" className="github-icon">
+            <PiGithubLogoLight />
+          </Button>
+        </div>
       </Box>
     </form>
   );

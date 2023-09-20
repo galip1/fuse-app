@@ -4,6 +4,7 @@ import LoadingPage from "./pages/loading-page";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     setLoading(false);
   }, [loading]);

@@ -10,13 +10,13 @@ import {
 } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import logo from "../assets/img/logo/logo2.jpeg";
+import logo from "../../assets/img/logo/logo2.jpeg";
 import { Link } from "react-router-dom";
 import { CiTwitter } from "react-icons/ci";
 import { PiGithubLogoLight } from "react-icons/pi";
 import { SlSocialFacebook } from "react-icons/sl";
 import "./sign-in.scss";
-import Sidebar from "./sidebar";
+import Sidebar from "../side/side-right";
 const SignIn = () => {
   const [rememberMe, setRememberMe] = useState(false);
 

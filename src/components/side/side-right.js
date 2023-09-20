@@ -1,8 +1,9 @@
 import React from "react";
-import "./sidebar.scss";
-import image1 from "../assets/img/image/image1.jpeg";
-import image2 from "../assets/img/image/iamge2.jpeg";
-import image3 from "../assets/img/image/image3.jpeg";
+import "./side-right.scss";
+import image1 from "../../assets/img/image/image1.jpeg";
+import image2 from "../../assets/img/image/iamge2.jpeg";
+import image3 from "../../assets/img/image/image3.jpeg";
+
 const Sidebar = () => {
   return (
     <div className="sidebar-image">
